@@ -9,6 +9,7 @@ import path from 'node:path';
 import { store, getSettings, setSettings } from './db.js';
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = Number(process.env.PORT || 3000);
 const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
