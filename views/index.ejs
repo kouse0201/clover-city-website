@@ -1,0 +1,99 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><%= settings.site_title %></title><link rel="stylesheet" href="/css/style.css"><style>:root{--primary:<%= settings.primary_color %>;--accent:<%= settings.accent_color %>;--bg:<%= settings.background_color %>;--panel:<%= settings.panel_color %>;--text:<%= settings.text_color %>;--muted:<%= settings.muted_color %>}</style></head><body>
+<div class="ambient"></div>
+<header class="topbar"><a class="brand" href="/"><img src="/images/clover-logo.png" alt="CLOVER"><div><strong><%= settings.site_name %></strong><span>RULES & GUIDELINES</span></div></a><div class="top-actions"><input id="search" class="search" placeholder="ルールを検索…"><% if(settings.discord_url){ %><a class="btn" href="<%= settings.discord_url %>" target="_blank" rel="noopener">Discord</a><% } %><a class="ghost" href="/admin">管理</a></div></header>
+<div class="layout"><aside class="sidebar"><nav><a href="#overview" class="nav-item active">♣ 概要</a><% categories.forEach(c=>{ %><a href="#cat-<%= c.id %>" class="nav-item"><span><%= c.icon %></span><%= c.name %></a><% }) %><a href="#crimes" class="nav-item">◆ 強盗一覧</a><a href="#fines" class="nav-item">¥ 罰金一覧</a></nav></aside>
+<main class="content" id="content"><section class="hero" id="overview"><div class="hero-copy"><span class="eyebrow">CLOVER CITY OFFICIAL</span><h1>SERVER <em>INFORMATION</em></h1><p>すべてのプレイヤーが快適なプレイを楽しむための公式ルール/案内です。　　　　参加前に必ず確認してください。</p></div><img src="/images/clover-logo.png" alt="CLOVER CITY logo" class="hero-logo"></section>
+<% categories.forEach((c,ci)=>{ %><section class="rule-section searchable" id="cat-<%= c.id %>"><div class="section-head"><div><span class="section-no"><%= String(ci+1).padStart(2,'0') %></span><h2><%= c.name %></h2><p><%= c.description %></p></div></div><% c.subcategories.forEach((s,si)=>{ %><div class="subsection"><h3><%= s.name %></h3><div class="rule-grid"><% if(!s.rules.length){ %><div class="empty-card">ルールは準備中です。</div><% } %><% s.rules.forEach((r,ri)=>{ %><article class="rule-card severity-<%= r.severity %>" id="rule-<%= r.id %>" data-search="<%= (c.name+' '+s.name+' '+r.title+' '+r.body).toLowerCase() %>"><div class="rule-meta"><span class="rule-number"><%= ci+1 %>.<%= si+1 %>.<%= ri+1 %></span><% if(r.badge){ %><span class="badge"><%= r.badge %></span><% } %></div><h4><%= r.title %></h4><p><%= r.body %></p></article><% }) %></div></div><% }) %></section><% }) %>
+<section class="rule-section searchable" id="crimes">
+
+  <div class="section-head">
+    <div>
+      <span class="section-no">07</span>
+      <h2>強盗一覧</h2>
+      <p>強盗の条件一覧</p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>犯罪名</th>
+          <th>分類</th>
+          <th>犯罪人数</th>
+          <th>犯罪ヘリ台数</th>
+          <th>人質</th>
+          <th>警察出動人数</th>
+          <th>警察ヘリ台数</th>
+          <th>警察ライオット台数</th>
+          <th>備考</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <% if (!crimes.length) { %>
+
+          <tr>
+            <td colspan="9" class="muted">
+              準備中です。
+            </td>
+          </tr>
+
+        <% } %>
+
+
+        <% crimes.forEach(x => { %>
+
+          <tr data-search="<%= Object.values(x).join(' ').toLowerCase() %>">
+
+            <td>
+              <strong><%= x.name || '' %></strong>
+            </td>
+
+            <td>
+              <%= x.classification || '' %>
+            </td>
+
+            <td>
+              <%= x.criminal_players || '' %>
+            </td>
+
+            <td>
+              <%= x.criminal_helis || '' %>
+            </td>
+
+            <td>
+              <%= x.hostage || '' %>
+            </td>
+
+            <td>
+              <%= x.police_players || '' %>
+            </td>
+
+            <td>
+              <%= x.police_helis || '' %>
+            </td>
+
+            <td>
+              <%= x.police_riots || '' %>
+            </td>
+
+            <td>
+              <%= x.notes || '' %>
+            </td>
+
+          </tr>
+
+        <% }) %>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section><section class="rule-section searchable" id="fines"><div class="section-head"><div><span class="section-no">08</span><h2>罰金一覧</h2><p>違反・罰金・懲役時間一覧</p></div></div><div class="table-wrap"><table><thead><tr><th>違反名</th><th>罰金</th><th>懲役</th><th>備考</th></tr></thead><tbody><% if(!fines.length){ %><tr><td colspan="4" class="muted">準備中です。</td></tr><% } %><% fines.forEach(x=>{ %><tr data-search="<%= Object.values(x).join(' ').toLowerCase() %>"><td><strong><%= x.name %></strong></td><td>¥<%= Number(x.amount).toLocaleString('ja-JP') %></td><td><%= x.jail_minutes %>分</td><td><%= x.notes %></td></tr><% }) %></tbody></table></div></section>
+<footer>© <%= new Date().getFullYear() %> <%= settings.site_name %> · OFFICIAL RULES</footer></main></div><script src="/js/app.js"></script></body></html>

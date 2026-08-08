@@ -1,0 +1,210 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · <%= settings.site_name %></title><link rel="stylesheet" href="/css/style.css"><style>:root{--primary:<%= settings.primary_color %>;--accent:<%= settings.accent_color %>;--bg:<%= settings.background_color %>;--panel:<%= settings.panel_color %>;--text:<%= settings.text_color %>;--muted:<%= settings.muted_color %>}</style></head><body class="admin-body"><header class="topbar"><a class="brand" href="/"><img src="/images/clover-logo.png"><div><strong>CLOVER CONTROL</strong><span>ADMIN CONSOLE</span></div></a><div class="top-actions"><span class="muted"><%= user.username %></span><a class="ghost" href="/">公開サイト</a><form method="post" action="/auth/logout"><button class="ghost" type="submit">ログアウト</button></form></div></header>
+<div class="admin-layout"><aside class="admin-nav"><a href="#settings">サイト設定</a><a href="#categories">カテゴリ</a><a href="#rules">ルール</a><a href="#crimes">犯罪一覧</a><a href="#fines">罰金一覧</a></aside><main class="admin-main">
+<section class="admin-section" id="settings"><h2>サイト設定</h2><form class="form-grid" method="post" action="/admin/settings"><label>サイト名<input name="site_name" value="<%= settings.site_name %>"></label><label>ページタイトル<input name="site_title" value="<%= settings.site_title %>"></label><label>Discord URL<input name="discord_url" value="<%= settings.discord_url %>"></label><label>公開状態<select name="site_enabled"><option value="1" <%= settings.site_enabled==='1'?'selected':'' %>>公開</option><option value="0" <%= settings.site_enabled==='0'?'selected':'' %>>非公開</option></select></label><label class="wide">メンテナンス表示<textarea name="maintenance_message"><%= settings.maintenance_message %></textarea></label><label>メインカラー<input type="color" name="primary_color" value="<%= settings.primary_color %>"></label><label>アクセント<input type="color" name="accent_color" value="<%= settings.accent_color %>"></label><label>背景<input type="color" name="background_color" value="<%= settings.background_color %>"></label><label>パネル<input type="color" name="panel_color" value="<%= settings.panel_color %>"></label><label>文字<input type="color" name="text_color" value="<%= settings.text_color %>"></label><label>サブ文字<input type="color" name="muted_color" value="<%= settings.muted_color %>"></label><button class="btn wide">保存</button></form></section>
+<section class="admin-section" id="categories"><h2>カテゴリ</h2><form class="inline-editor" method="post" action="/admin/category/save"><input name="name" placeholder="カテゴリ名" required><input name="slug" placeholder="slug (空欄可)"><input name="icon" value="♣" maxlength="8"><input name="sort_order" type="number" value="0"><label class="check"><input type="checkbox" name="is_public" value="1" checked>公開</label><button class="btn">追加</button></form><div class="admin-list"><% categories.forEach(c=>{ %><form class="row-editor" method="post" action="/admin/category/save"><input type="hidden" name="id" value="<%= c.id %>"><input name="name" value="<%= c.name %>"><input name="slug" value="<%= c.slug %>"><input name="icon" value="<%= c.icon %>"><input name="sort_order" type="number" value="<%= c.sort_order %>"><label class="check"><input type="checkbox" name="is_public" value="1" <%= c.is_public?'checked':'' %>>公開</label><button class="ghost">保存</button></form><form method="post" action="/admin/category/delete" onsubmit="return confirm('カテゴリ配下も削除されます。削除しますか？')"><input type="hidden" name="id" value="<%= c.id %>"><button class="danger-btn">削除</button></form><% }) %></div></section>
+<section class="admin-section" id="rules"><h2>サブカテゴリ / ルール</h2><h3>サブカテゴリ追加</h3><form class="inline-editor" method="post" action="/admin/subcategory/save"><select name="category_id"><% categories.forEach(c=>{ %><option value="<%= c.id %>"><%= c.name %></option><% }) %></select><input name="name" placeholder="サブカテゴリ名" required><input name="sort_order" type="number" value="0"><label class="check"><input type="checkbox" name="is_public" value="1" checked>公開</label><button class="btn">追加</button></form><div class="admin-list compact"><% subcategories.forEach(s=>{ %><form class="row-editor" method="post" action="/admin/subcategory/save"><input type="hidden" name="id" value="<%= s.id %>"><select name="category_id"><% categories.forEach(c=>{ %><option value="<%= c.id %>" <%= c.id===s.category_id?'selected':'' %>><%= c.name %></option><% }) %></select><input name="name" value="<%= s.name %>"><input name="sort_order" type="number" value="<%= s.sort_order %>"><label class="check"><input type="checkbox" name="is_public" value="1" <%= s.is_public?'checked':'' %>>公開</label><button class="ghost">保存</button></form><form method="post" action="/admin/subcategory/delete" onsubmit="return confirm('配下ルールも削除されます。削除しますか？')"><input type="hidden" name="id" value="<%= s.id %>"><button class="danger-btn">削除</button></form><% }) %></div>
+<h3>ルール追加</h3><form class="rule-editor" method="post" action="/admin/rule/save"><select name="subcategory_id"><% subcategories.forEach(s=>{ const c=categories.find(x=>x.id===s.category_id); %><option value="<%= s.id %>"><%= c?.name %> / <%= s.name %></option><% }) %></select><input name="title" placeholder="ルールタイトル" required><textarea name="body" placeholder="本文"></textarea><select name="severity"><option value="normal">通常</option><option value="important">重要</option><option value="warning">警告</option><option value="danger">禁止</option></select><input name="badge" placeholder="NEW / UPDATED 等"><input name="sort_order" type="number" value="0"><label class="check"><input type="checkbox" name="is_public" value="1" checked>公開</label><button class="btn">追加</button></form><div class="admin-cards"><% rules.forEach(r=>{ %><details><summary><%= r.title %></summary><form class="rule-editor" method="post" action="/admin/rule/save"><input type="hidden" name="id" value="<%= r.id %>"><select name="subcategory_id"><% subcategories.forEach(s=>{ const c=categories.find(x=>x.id===s.category_id); %><option value="<%= s.id %>" <%= s.id===r.subcategory_id?'selected':'' %>><%= c?.name %> / <%= s.name %></option><% }) %></select><input name="title" value="<%= r.title %>"><textarea name="body"><%= r.body %></textarea><select name="severity"><% ['normal','important','warning','danger'].forEach(x=>{ %><option value="<%= x %>" <%= x===r.severity?'selected':'' %>><%= x %></option><% }) %></select><input name="badge" value="<%= r.badge %>"><input name="sort_order" type="number" value="<%= r.sort_order %>"><label class="check"><input type="checkbox" name="is_public" value="1" <%= r.is_public?'checked':'' %>>公開</label><button class="btn">保存</button></form><form method="post" action="/admin/rule/delete" onsubmit="return confirm('削除しますか？')"><input type="hidden" name="id" value="<%= r.id %>"><button class="danger-btn">削除</button></form></details><% }) %></div></section>
+<section class="admin-section" id="crimes">
+  <h2>犯罪一覧</h2>
+
+  <h3>犯罪追加</h3>
+
+  <form class="table-editor" method="post" action="/admin/crime/save">
+
+    <input
+      name="name"
+      placeholder="犯罪名"
+      required
+    >
+
+    <input
+      name="classification"
+      placeholder="分類"
+    >
+
+    <input
+      name="criminal_players"
+      placeholder="犯罪人数"
+    >
+
+    <input
+      name="criminal_helis"
+      placeholder="犯罪ヘリ台数"
+    >
+
+    <input
+      name="hostage"
+      placeholder="人質"
+    >
+
+    <input
+      name="police_players"
+      placeholder="警察出動人数"
+    >
+
+    <input
+      name="police_helis"
+      placeholder="警察ヘリ台数"
+    >
+
+    <input
+      name="police_riots"
+      placeholder="警察ライオット台数"
+    >
+
+    <input
+      name="notes"
+      placeholder="備考"
+    >
+
+    <input
+      name="sort_order"
+      type="number"
+      value="0"
+      placeholder="表示順"
+    >
+
+    <label class="check">
+      <input
+        type="checkbox"
+        name="is_public"
+        value="1"
+        checked
+      >
+      公開
+    </label>
+
+    <button class="btn">
+      追加
+    </button>
+
+  </form>
+
+
+  <div class="admin-cards">
+
+    <% crimes.forEach(x => { %>
+
+      <details>
+
+        <summary>
+          <%= x.name %>
+        </summary>
+
+        <form
+          class="table-editor"
+          method="post"
+          action="/admin/crime/save"
+        >
+
+          <input
+            type="hidden"
+            name="id"
+            value="<%= x.id %>"
+          >
+
+          <input
+            name="name"
+            placeholder="犯罪名"
+            value="<%= x.name || '' %>"
+          >
+
+          <input
+            name="classification"
+            placeholder="分類"
+            value="<%= x.classification || '' %>"
+          >
+
+          <input
+            name="criminal_players"
+            placeholder="犯罪人数"
+            value="<%= x.criminal_players || '' %>"
+          >
+
+          <input
+            name="criminal_helis"
+            placeholder="犯罪ヘリ台数"
+            value="<%= x.criminal_helis || '' %>"
+          >
+
+          <input
+            name="hostage"
+            placeholder="人質"
+            value="<%= x.hostage || '' %>"
+          >
+
+          <input
+            name="police_players"
+            placeholder="警察出動人数"
+            value="<%= x.police_players || '' %>"
+          >
+
+          <input
+            name="police_helis"
+            placeholder="警察ヘリ台数"
+            value="<%= x.police_helis || '' %>"
+          >
+
+          <input
+            name="police_riots"
+            placeholder="警察ライオット台数"
+            value="<%= x.police_riots || '' %>"
+          >
+
+          <input
+            name="notes"
+            placeholder="備考"
+            value="<%= x.notes || '' %>"
+          >
+
+          <input
+            name="sort_order"
+            type="number"
+            value="<%= x.sort_order || 0 %>"
+          >
+
+          <label class="check">
+
+            <input
+              type="checkbox"
+              name="is_public"
+              value="1"
+              <%= x.is_public ? 'checked' : '' %>
+            >
+
+            公開
+
+          </label>
+
+          <button class="btn">
+            保存
+          </button>
+
+        </form>
+
+        <form
+          method="post"
+          action="/admin/crime/delete"
+          onsubmit="return confirm('この犯罪を削除しますか？')"
+        >
+
+          <input
+            type="hidden"
+            name="id"
+            value="<%= x.id %>"
+          >
+
+          <button class="danger-btn">
+            削除
+          </button>
+
+        </form>
+
+      </details>
+
+    <% }) %>
+
+  </div>
+
+</section><section class="admin-section" id="fines"><h2>罰金一覧</h2><form class="table-editor" method="post" action="/admin/fine/save"><input name="name" placeholder="違反名" required><input name="amount" type="number" placeholder="罰金"><input name="jail_minutes" type="number" placeholder="懲役分"><input name="notes" placeholder="備考"><input name="sort_order" type="number" value="0"><label class="check"><input type="checkbox" name="is_public" value="1" checked>公開</label><button class="btn">追加</button></form><div class="admin-cards"><% fines.forEach(x=>{ %><details><summary><%= x.name %></summary><form class="table-editor" method="post" action="/admin/fine/save"><input type="hidden" name="id" value="<%= x.id %>"><input name="name" value="<%= x.name %>"><input name="amount" type="number" value="<%= x.amount %>"><input name="jail_minutes" type="number" value="<%= x.jail_minutes %>"><input name="notes" value="<%= x.notes %>"><input name="sort_order" type="number" value="<%= x.sort_order %>"><label class="check"><input type="checkbox" name="is_public" value="1" <%= x.is_public?'checked':'' %>>公開</label><button class="btn">保存</button></form><form method="post" action="/admin/fine/delete"><input type="hidden" name="id" value="<%= x.id %>"><button class="danger-btn">削除</button></form></details><% }) %></div></section>
+</main></div></body></html>

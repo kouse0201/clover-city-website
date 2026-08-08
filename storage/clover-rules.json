@@ -1,0 +1,1069 @@
+{
+  "settings": {
+    "site_name": "CLOVER CITY",
+    "site_title": "CLOVER CITY RULES",
+    "site_enabled": "0",
+    "maintenance_message": "現在ルールサイトはメンテナンス中です。",
+    "discord_url": "",
+    "primary_color": "#8dff2a",
+    "accent_color": "#4bc10b",
+    "background_color": "#000000",
+    "panel_color": "#0b100a",
+    "text_color": "#c2ffd6",
+    "muted_color": "#98a492"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "基本事項",
+      "slug": "basic",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 2,
+      "name": "犯罪事項",
+      "slug": "crime-rules",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 30,
+      "is_public": 1
+    },
+    {
+      "id": 4,
+      "name": "ギャング事項",
+      "slug": "gang",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 40,
+      "is_public": 1
+    },
+    {
+      "id": 5,
+      "name": "イベントアタック事項",
+      "slug": "event-attack",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 40,
+      "is_public": 1
+    },
+    {
+      "id": 6,
+      "name": "支援について",
+      "slug": "support",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 60,
+      "is_public": 1
+    },
+    {
+      "id": 7,
+      "name": "各種JOB事項",
+      "slug": "job",
+      "icon": "♣",
+      "description": "",
+      "sort_order": 20,
+      "is_public": 1
+    }
+  ],
+  "subcategories": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "name": "基本事項",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 2,
+      "category_id": 2,
+      "name": "未分類",
+      "sort_order": 7,
+      "is_public": 1
+    },
+    {
+      "id": 4,
+      "category_id": 4,
+      "name": "未分類",
+      "sort_order": 8,
+      "is_public": 1
+    },
+    {
+      "id": 5,
+      "category_id": 5,
+      "name": "未分類",
+      "sort_order": 9,
+      "is_public": 1
+    },
+    {
+      "id": 6,
+      "category_id": 6,
+      "name": "未分類",
+      "sort_order": 10,
+      "is_public": 1
+    },
+    {
+      "id": 8,
+      "category_id": 7,
+      "name": "警察官JOB(公務員)",
+      "sort_order": 5,
+      "is_public": 1
+    },
+    {
+      "id": 10,
+      "category_id": 1,
+      "name": "Citizen/テクスチャ関連",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 11,
+      "category_id": 7,
+      "name": "救急JOB(公務員)",
+      "sort_order": 5,
+      "is_public": 1
+    },
+    {
+      "id": 12,
+      "category_id": 7,
+      "name": "メカニックJOB",
+      "sort_order": 5,
+      "is_public": 1
+    },
+    {
+      "id": 13,
+      "category_id": 7,
+      "name": "飲食JOB",
+      "sort_order": 5,
+      "is_public": 1
+    },
+    {
+      "id": 14,
+      "category_id": 7,
+      "name": "ファッションショップJOB",
+      "sort_order": 5,
+      "is_public": 1
+    },
+    {
+      "id": 15,
+      "category_id": 5,
+      "name": "GANG NIGHT",
+      "sort_order": 9,
+      "is_public": 1
+    }
+  ],
+  "rules": [
+    {
+      "id": 1,
+      "subcategory_id": 1,
+      "title": "基本禁止事項",
+      "body": "・キャラクターの性別\r\n　現実の性自認と異なるキャラクターの作成\r\n\r\n・コンバットログ\r\n　不具合以外で意図的にゲームを終了する行為\r\n\r\n・ラフエリア\r\n　指定されたエリア内での発砲や犯罪行為。ROBも犯罪となります。\r\n\r\n・VDM (車両で轢く行為)\r\n　犯罪時以外の関係者以外を車両で轢く行為\r\n\r\n・トライブバイ\r\n　車両乗車時の発砲を禁止\r\n　例外としてPDや個人医のテーザーの利用は許可する\r\n\r\n・RDM（ランダムデスマッチ)\r\n　犯罪時以外の理由のない殺人(暗殺依頼等の行為は〇)\r\n\r\n・セーフゾーン\r\n　セーフゾーン内での犯罪行為\r\n　セーフゾーン内への発砲行為\r\n　犯罪時(追跡状態)故意にセーフゾーン内に侵入する行為\r\n\r\n・パワーゲーミング\r\n　正攻法でないゲームプレイ\r\n　不具合やエモート等を利用したゲームプレイ\r\n\r\n・メタゲーミング\r\n　許可された状況時以外のゲーム外通話 / 他ゲームプレイ\r\n　許可:セーフエリア内※随時追加/変更\r\n\r\n・ヘイトスピーチ\r\n　人種、民族、国籍、性別、性的指向、性自認、宗教\r\n　外見、障がい etc..\r\n　特定の集団や個人を差別、軽蔑する表現\r\n\r\n・チート行為/グリッチ行為/不正ソフトの利用\r\n　不正なチートソフトウェアの利用\r\n　有利になるような外部ソフトウェアの利用\r\n　自動マクロ化を行う行為\r\n\r\n・音源について\r\n　著作権侵害の恐れのある音源の利用\r\n\r\n・多重起動/クライアント別での参加\r\n　1人につき1キャラクターのみの参加\r\n\r\n・RMT（リアルマネートレード）\r\n　ゲーム内のアイテムや通貨,車両,アカウント等\r\n　現実のお金や電子マネー等で取引を行う行為\r\n\r\n・運営者以外の者が運営を名乗る行為\r\n\r\n・体の部位が透けたままの利用\r\n　説明がつくものは〇\r\n\r\n・車両の装甲以外の武装カスタム\r\n\r\n・異常と認知されるタイヤの位置/角度のカスタム\r\n\r\n・ギャング以外のROB行為\r\n\r\n・ギャング以外のバンダナ着用\r\n\r\n・invoice 請求の悪用禁止\r\n\r\n・ルールの抜け穴を突く行為",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 1,
+      "is_public": 1,
+      "updated_at": "2026-08-08T09:40:51.421Z"
+    },
+    {
+      "id": 2,
+      "subcategory_id": 1,
+      "title": "サーバー案内",
+      "body": "皆さんと成長していくサーバーです。\r\n　 不安なことや提案などはお気軽に運営にご連絡ください。\r\n\r\n【市民権対象】\r\n・サーバールールを遵守\r\n・発声が可能な方\r\n・日本語での意思疎通が取れる方\r\n・ボディカメラ(録画)が出来る方\r\n\r\n【ラフエリア】\r\nこのエリアでは街にいながらも他で通話やゲームを自由にして構いません。\r\n・セーフエリア(有人JOBエリアを除く)\r\n・個人居住宅\r\n・アパルメント\r\n\r\n【各JOBオーナー申請】\r\n※必ずしも申請したからオーナーになれるという訳ではございません。\r\n　面談後審査させていただきます。\r\n\r\n・既存のJOBに関して\r\n　「既存店舗オーナー申請チケット」にて対応可能。\r\n　その後面談対応となります。\r\n\r\n・新規JOBについて\r\n　「新規店舗オーナー申請チケット」にて対応可能。\r\n　その後面談対応となります。\r\n　※新規JOBによっては支援にてMLO追加や\r\n　　スクリプトの作成/導入が必須となりますので\r\n　　ご購入の前に一度チケットにてご相談をお願い致します。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 0,
+      "is_public": 1,
+      "updated_at": "2026-08-08T10:29:35.943Z"
+    },
+    {
+      "id": 4,
+      "subcategory_id": 10,
+      "title": "利用可能",
+      "body": "※不安であれば事前にチケットにてご相談ください。\r\n\r\n・他クライアントに影響を与えないもの\r\n\r\n・ゲームのプレイにおいて有利不利がでるもの\r\n\r\n・キルエフェクト\r\n　\r\n・クロスヘア表示\r\n\r\n・明るさを調整するもの\r\n　軽度なもの朝夜の区別がつかないもの\r\n\r\n・トレーサー\r\n　射線が遅延で消滅するもの\r\n\r\n・サウンドエフェクト",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 2,
+      "is_public": 1,
+      "updated_at": "2026-08-08T08:06:20.474Z"
+    },
+    {
+      "id": 5,
+      "subcategory_id": 10,
+      "title": "利用違反",
+      "body": "※不安であれば事前にチケットにてご相談ください。\r\n\r\n・有利不利が出るファイルの使用を禁止\r\n\r\n・プレイヤー等が発光する類の利用を禁止\r\n\r\n・建物やオブジェクトを透過する類の利用を禁止\r\n\r\n・朝、夜の時間が判別できないもの\r\n\r\n・Nobushを禁止\r\n\r\n・Nowaterを禁止\r\n\r\n・Nopropを禁止\r\n\r\n・Norainを禁止",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 2,
+      "is_public": 1,
+      "updated_at": "2026-08-08T09:58:43.840Z"
+    },
+    {
+      "id": 6,
+      "subcategory_id": 8,
+      "title": "概要",
+      "body": "街と市民の平和を守る義務\r\n犯罪者/ギャング不可\r\n\r\n【業務内容】\r\n・犯罪出動\r\n・牢屋対応\r\n・市民対応\r\n・初心者案内\r\n・イベント運営\r\n\r\n【概要】\r\n・犯罪シーン\r\n　捜索以外で犯罪シーンから離脱した者/署に帰投した者は以降の対応不可\r\n　別犯罪への出動は〇\r\n\r\n・犯罪者対応(牢屋)\r\n　牢屋に入れた時点でその犯罪者の犯罪シーンを終了とする。\r\n　まだ牢屋にいない犯罪者は犯罪シーンである。\r\n\r\n・出動可能人数\r\n　強盗ごとに出動可能人数の制限がある。\r\n　強盗を除く通常犯罪は制限無し。\r\n\r\n・指名手配\r\n　血痕や車両の所有者情報でのみ発行が可能。\r\n\r\n・汚職行為\r\n　警察官の汚職行為はサーバールールの違反ではない。\r\n　あくまでPL間で対処すること。\r\n\r\n・犯罪対応/市民対応\r\n　必ずボディカメラ(録画)をすること。\r\n\r\n・給与形態\r\n　牢屋にて犯罪者対応をした際の罰金から割合で獲得する。\r\n\r\n【オーナー(署長)】\r\n・警察についての提案や変更\r\n　どんな内容であれ受け付け精査の後対応致します。\r\n　街内あるいはチケットにてお気軽にご相談ください。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 3,
+      "is_public": 1,
+      "updated_at": "2026-08-08T11:13:36.133Z"
+    },
+    {
+      "id": 7,
+      "subcategory_id": 8,
+      "title": "違反行為",
+      "body": "以下はサーバールール違反。\r\n\r\n・職権乱用\r\n　虚偽の罰金/刑期を対象に与える行為\r\n　警察の機能をいたずらに利用する行為\r\n\r\n・出動\r\n　出動要請に参加せず、犯罪や強盗に出動する行為\r\n　出動人数を超えた強盗への参加\r\n\r\n・POLICE装備\r\n　PDの装備を警察以外の者に付与,貸与する行為\r\n\r\n・発砲\r\n　人質がいる状態や最初から発砲が許可されいる強盗以外での状況での発砲。\r\n　両手を上げている者への発砲行為\r\n　※発砲があった現場は例外とする。\r\n　※いたずらに両手を上げ下げしている者には例外とする\r\n\r\n・車両\r\n　PD車両ではない車両での出動。\r\n　サイレンを鳴らさず現場へと向かう行為。\r\n\r\n・強盗\r\n　警察JOBに在籍しながらの強盗行為",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 3,
+      "is_public": 1,
+      "updated_at": "2026-08-08T09:58:18.773Z"
+    },
+    {
+      "id": 8,
+      "subcategory_id": 11,
+      "title": "概要",
+      "body": "市民の命を守るJOB\r\n犯罪者/ギャング不可\r\n\r\n【業務内容】\r\n・救急活動\r\n・イベント運営\r\n\r\n【概要】\r\n・怪我の治療\r\n　怪我の種類を診断し治療を行う。\r\n　弾痕があればPDへと通報を行う。\r\n\r\n・蘇生処置\r\n　松葉杖の付与\r\n\r\n・給与形態\r\n　救急対応をした際の治療費から割合で獲得する。\r\n\r\n【オーナー(院長)】\r\n・救急についての提案や変更\r\n　どんな内容であれ受け付け精査の後対応致します。\r\n　街内あるいはチケットにてお気軽にご相談ください。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 4,
+      "is_public": 1,
+      "updated_at": "2026-08-08T10:37:55.546Z"
+    },
+    {
+      "id": 9,
+      "subcategory_id": 11,
+      "title": "違反行為",
+      "body": "以下はサーバールール違反。\r\n\r\n・職権乱用\r\n　虚偽の治療費を対象に与える行為\r\n\r\n・救急道具\r\n　EMS以外の者に付与,貸与する行為\r\n\r\n・松葉杖\r\n　蘇生処置対象者以外に故意に同意なく付与する行為　\r\n\r\n・車両\r\n　救急車両以外での出動\r\n\r\n・強盗\r\n　救急JOBに在籍しながらの強盗行為",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 4,
+      "is_public": 1,
+      "updated_at": "2026-08-08T10:00:45.359Z"
+    },
+    {
+      "id": 10,
+      "subcategory_id": 12,
+      "title": "概要",
+      "body": "市民の車を整備/カスタムするJOB\r\n\r\n【業務内容】\r\n・車両整備\r\n・車両カスタム対応\r\n・Nos/リペアキットの販売\r\n・車両スタンス調整\r\n\r\n【概要】\r\n・車両のカスタム\r\n　タブレット端末に送信された注文のカスタムを専用アイテムで行う。\r\n\r\n・車両の整備\r\n　車体の劣化を専用のアイテムで修復できる\r\n\r\n・Nosの搭載\r\n　専用アイテムでニトロを搭載する\r\n\r\n・特定アイテムの販売\r\n　Nos缶やリペアキットを販売できる。\r\n\r\n・スタンスの調整\r\n　専用アイテムで調整可能。\r\n\r\n・給与形態\r\n　オーナー判断で設定される。\r\n\r\n【オーナー】\r\n・メカニックについての提案や変更\r\n　車両の追加や車両調整等受け付け精査の後対応致します。\r\n　街内あるいはチケットにてお気軽にご相談ください。\r\n※他メカニックとの連携が必須となります。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 5,
+      "is_public": 1,
+      "updated_at": "2026-08-08T11:00:26.324Z"
+    },
+    {
+      "id": 11,
+      "subcategory_id": 12,
+      "title": "違反行為",
+      "body": "以下はサーバールール違反。\r\n\r\n・職権乱用\r\n　不正に整備費用をだまし取る行為\r\n\r\n・メカニック道具\r\n　メカニックで使われるアイテムを\r\n　メカニックの者以外に付与、貸与する行為",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 5,
+      "is_public": 1,
+      "updated_at": "2026-08-08T11:00:11.497Z"
+    },
+    {
+      "id": 13,
+      "subcategory_id": 13,
+      "title": "概要",
+      "body": "市民のお腹と喉を満たすJOB\r\n\r\n【業務内容】\r\n・効能付き消費アイテムの販売\r\n・イベント運営\r\n\r\n【概要】\r\n・COOKING\r\n　素材アイテムを使用し、商品を作成し販売\r\n\r\n・商品の追加\r\n　飲食チケットにてオーナーより追加可能\r\n　(1か月2品まで無料)\r\n　※店舗のコンセプトや商品の内容によっては承認しかねる旨をご了承ください。\r\n\r\n・効能\r\n　チケット内にてご相談。\r\n　体力,満腹値,水分値,ストレス値や特殊効果を設定可能\r\n　※店舗のコンセプトや商品の内容によっては承認しかねる旨をご了承ください。\r\n　\r\n・給与形態\r\n　オーナー判断で設定される。\r\n\r\n【オーナー】\r\n・飲食や店舗についての提案や変更や追加\r\n　どんな内容であれ受け付け精査の後対応致します。\r\n　街内あるいはチケットにてお気軽にご相談ください。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 6,
+      "is_public": 1,
+      "updated_at": "2026-08-08T11:15:20.245Z"
+    },
+    {
+      "id": 14,
+      "subcategory_id": 13,
+      "title": "違反行為",
+      "body": "以下はサーバールール違反。\r\n\r\n・職権乱用\r\n　不正に飲食代金をだまし取る行為\r\n\r\n・価格\r\n　効能によって定められた最低金額より下回る価格での販売。\r\n\r\n・他飲食店への圧力,妨害行為",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 6,
+      "is_public": 1,
+      "updated_at": "2026-08-08T11:39:38.560Z"
+    },
+    {
+      "id": 15,
+      "subcategory_id": 14,
+      "title": "概要",
+      "body": "衣服やアクセサリーを取り扱うJOB\r\n\r\n【業務内容】\r\n・衣服やアクセサリーの販売\r\n・イベント運営\r\n\r\n【概要】\r\n・Craft\r\n　素材アイテムを使用し、商品を作成し販売\r\n\r\n・商品の追加\r\n　JOBチケットにてオーナーより追加可能\r\n　(1か月2品まで無料)\r\n　\r\n・給与形態\r\n　オーナー判断で設定される。\r\n\r\n【オーナー】\r\n・衣服や店舗についての提案や変更や追加\r\n　どんな内容であれ受け付け精査の後対応致します。\r\n　街内あるいはチケットにてお気軽にご相談ください。",
+      "severity": "important",
+      "badge": "",
+      "sort_order": 7,
+      "is_public": 1,
+      "updated_at": "2026-08-08T12:48:54.172Z"
+    },
+    {
+      "id": 16,
+      "subcategory_id": 14,
+      "title": "違反行為",
+      "body": "以下はサーバールール違反。\r\n\r\n・職権乱用\r\n　不正に代金をだまし取る行為\r\n\r\n・価格\r\n　運営と相談し定まった価格以外での販売を禁止",
+      "severity": "danger",
+      "badge": "",
+      "sort_order": 7,
+      "is_public": 1,
+      "updated_at": "2026-08-08T12:54:24.300Z"
+    }
+  ],
+  "crimes": [
+    {
+      "id": 1,
+      "name": "家強盗",
+      "min_players": "1",
+      "max_players": "3",
+      "police_required": "犯罪者の人数+3",
+      "cooldown": "",
+      "hostage": "可能",
+      "weapons": "",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1,
+      "classification": "小型犯罪",
+      "criminal_players": "1 - 3",
+      "criminal_helis": "0",
+      "police_players": "犯罪人数+3(1 - 6)",
+      "police_helis": "1",
+      "police_riots": "0"
+    },
+    {
+      "id": 2,
+      "name": "ATM強盗",
+      "classification": "小型犯罪",
+      "criminal_players": "1 - 3",
+      "criminal_helis": "0",
+      "hostage": "可能",
+      "police_players": "犯罪人数+3(1 - 6)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 3,
+      "name": "コンビニ強盗",
+      "classification": "小型犯罪",
+      "criminal_players": "1 - 3",
+      "criminal_helis": "0",
+      "hostage": "可能",
+      "police_players": "犯罪人数+3(1 - 6)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 4,
+      "name": "フリーカ強盗",
+      "classification": "小型犯罪",
+      "criminal_players": "1 - 3",
+      "criminal_helis": "0",
+      "hostage": "可能",
+      "police_players": "犯罪人数+3(1 - 6)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 5,
+      "name": "パージ強盗",
+      "classification": "準中型犯罪",
+      "criminal_players": "3 - 6",
+      "criminal_helis": "0",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 9)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 6,
+      "name": "宝石店強盗VANGELICO支店",
+      "classification": "準中型犯罪",
+      "criminal_players": "3 - 6",
+      "criminal_helis": "0",
+      "hostage": "可能",
+      "police_players": "犯罪人数+3(1 - 9)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 7,
+      "name": "ナイトクラブ強盗",
+      "classification": "準中型犯罪",
+      "criminal_players": "3 - 6",
+      "criminal_helis": "0",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 9)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 8,
+      "name": "パレト銀行強盗",
+      "classification": "準中型犯罪",
+      "criminal_players": "3 - 6",
+      "criminal_helis": "0",
+      "hostage": "可能",
+      "police_players": "犯罪人数+3(1 - 9)",
+      "police_helis": "1",
+      "police_riots": "0",
+      "notes": "人質交渉可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 9,
+      "name": "ボブキャット強盗",
+      "classification": "中型犯罪",
+      "criminal_players": "4 - 8",
+      "criminal_helis": "1",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 11)",
+      "police_helis": "2",
+      "police_riots": "1",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 10,
+      "name": "列車強盗",
+      "classification": "中型犯罪",
+      "criminal_players": "4 - 8",
+      "criminal_helis": "1",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 11)",
+      "police_helis": "2",
+      "police_riots": "1",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 11,
+      "name": "客船強盗",
+      "classification": "中型犯罪",
+      "criminal_players": "4 - 8",
+      "criminal_helis": "1",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 11)",
+      "police_helis": "2",
+      "police_riots": "1",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 12,
+      "name": "絵画強盗",
+      "classification": "中型犯罪",
+      "criminal_players": "4 - 8",
+      "criminal_helis": "1",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 11)",
+      "police_helis": "2",
+      "police_riots": "1",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 13,
+      "name": "軍事基地強盗",
+      "classification": "準大型犯罪",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 14,
+      "name": "宝石店強盗VANGELICO本店",
+      "classification": "準大型犯罪",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 15,
+      "name": "オイルリグ強盗",
+      "classification": "準大型犯罪",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 16,
+      "name": "アーティファクト強盗",
+      "classification": "準大型犯罪",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 17,
+      "name": "金庫強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 18,
+      "name": "ユニオン強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 19,
+      "name": "パシフィック銀行強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 20,
+      "name": "ダイヤモンドカジノ強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 21,
+      "name": "飛行場襲撃強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 22,
+      "name": "貨物船強盗",
+      "classification": "大型犯罪(ギャング)",
+      "criminal_players": "5 - 10",
+      "criminal_helis": "2",
+      "hostage": "不可",
+      "police_players": "犯罪人数+3(1 - 13)",
+      "police_helis": "2",
+      "police_riots": "2",
+      "notes": "警察即発砲可能",
+      "sort_order": 0,
+      "is_public": 1
+    }
+  ],
+  "fines": [
+    {
+      "id": 1,
+      "name": "家強盗",
+      "amount": 2000000,
+      "jail_minutes": 15,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 2,
+      "name": "ATM強盗",
+      "amount": 2000000,
+      "jail_minutes": 15,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 3,
+      "name": "コンビニ強盗",
+      "amount": 3500000,
+      "jail_minutes": 20,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 4,
+      "name": "フリーカ強盗",
+      "amount": 4500000,
+      "jail_minutes": 25,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 5,
+      "name": "パージ強盗",
+      "amount": 7500000,
+      "jail_minutes": 30,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 6,
+      "name": "宝石強盗VANGELICO支店",
+      "amount": 7500000,
+      "jail_minutes": 30,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 7,
+      "name": "ナイトクラブ強盗",
+      "amount": 7500000,
+      "jail_minutes": 30,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 8,
+      "name": "パレト銀行強盗",
+      "amount": 7500000,
+      "jail_minutes": 30,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 9,
+      "name": "ボブキャット強盗",
+      "amount": 10000000,
+      "jail_minutes": 35,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 10,
+      "name": "列車強盗",
+      "amount": 10000000,
+      "jail_minutes": 35,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 11,
+      "name": "客船強盗",
+      "amount": 10000000,
+      "jail_minutes": 35,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 12,
+      "name": "絵画強盗",
+      "amount": 10000000,
+      "jail_minutes": 35,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 13,
+      "name": "軍事基地強盗",
+      "amount": 15000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 14,
+      "name": "宝石強盗VANGELICO本店",
+      "amount": 15000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 15,
+      "name": "オイルリグ強盗",
+      "amount": 15000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 16,
+      "name": "アーティファクト強盗",
+      "amount": 15000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 17,
+      "name": "金庫強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 18,
+      "name": "ユニオン強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 19,
+      "name": "パシフィック銀行強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 20,
+      "name": "ダイヤモンドカジノ強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 21,
+      "name": "飛行場襲撃強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 22,
+      "name": "貨物船強盗",
+      "amount": 20000000,
+      "jail_minutes": 40,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 23,
+      "name": "指名手配(+罪状追加)",
+      "amount": 10000000,
+      "jail_minutes": 0,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 24,
+      "name": "銃刀法違反(強盗を含まない)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 25,
+      "name": "発砲(強盗を含まない)",
+      "amount": 1000000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 26,
+      "name": "車両窃盗(強盗を含む)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 27,
+      "name": "危険運転(強盗を含まない,チェイス発生時)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 28,
+      "name": "PL殺人",
+      "amount": 2000000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 29,
+      "name": "公務執行妨害(強盗を含まない)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 30,
+      "name": "武器ライセンス不所持(強盗を含まない)",
+      "amount": 500000,
+      "jail_minutes": 0,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 31,
+      "name": "暴行(強盗を含まない)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 32,
+      "name": "詐欺",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 33,
+      "name": "器物破損(強盗を含まない)",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 34,
+      "name": "薬物素材所持",
+      "amount": 1500000,
+      "jail_minutes": 15,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 35,
+      "name": "薬物売買",
+      "amount": 5000000,
+      "jail_minutes": 10,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 36,
+      "name": "薬物摂取",
+      "amount": 1500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 37,
+      "name": "薬物所持(1~10)",
+      "amount": 1000000,
+      "jail_minutes": 10,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 38,
+      "name": "薬物所持(11~20)",
+      "amount": 2000000,
+      "jail_minutes": 15,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 39,
+      "name": "薬物所持(21~30)",
+      "amount": 3000000,
+      "jail_minutes": 20,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 40,
+      "name": "薬物所持(31~40)",
+      "amount": 4000000,
+      "jail_minutes": 25,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 41,
+      "name": "薬物所持(41~50)",
+      "amount": 5000000,
+      "jail_minutes": 30,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 42,
+      "name": "薬物所持(51~)",
+      "amount": 6000000,
+      "jail_minutes": 35,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 43,
+      "name": "業務妨害(JOB)",
+      "amount": 5000000,
+      "jail_minutes": 20,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 44,
+      "name": "セクハラ",
+      "amount": 5000000,
+      "jail_minutes": 20,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 45,
+      "name": "不法侵入",
+      "amount": 3000000,
+      "jail_minutes": 10,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 46,
+      "name": "侮辱行為",
+      "amount": 500000,
+      "jail_minutes": 5,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 47,
+      "name": "汚職(公務員)",
+      "amount": 500000000,
+      "jail_minutes": 0,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    },
+    {
+      "id": 48,
+      "name": "六法違犯(BAN不要案件)",
+      "amount": 500000000,
+      "jail_minutes": 0,
+      "notes": "",
+      "sort_order": 0,
+      "is_public": 1
+    }
+  ],
+  "counters": {
+    "categories": 7,
+    "subcategories": 15,
+    "rules": 16,
+    "crimes": 22,
+    "fines": 48
+  }
+}
