@@ -2,7 +2,7 @@
   "settings": {
     "site_name": "CLOVER CITY",
     "site_title": "CLOVER CITY RULES",
-    "site_enabled": "0",
+    "site_enabled": "1",
     "maintenance_message": "現在ルールサイトはメンテナンス中です。",
     "discord_url": "",
     "primary_color": "#8dff2a",
@@ -79,7 +79,7 @@
     {
       "id": 2,
       "category_id": 2,
-      "name": "未分類",
+      "name": "犯罪ルール",
       "sort_order": 7,
       "is_public": 1
     },
@@ -93,7 +93,7 @@
     {
       "id": 5,
       "category_id": 5,
-      "name": "未分類",
+      "name": "AIR DROP",
       "sort_order": 9,
       "is_public": 1
     },
@@ -208,7 +208,7 @@
       "badge": "",
       "sort_order": 3,
       "is_public": 1,
-      "updated_at": "2026-08-08T11:13:36.133Z"
+      "updated_at": "2026-08-08T16:17:26.346Z"
     },
     {
       "id": 7,
@@ -307,7 +307,18 @@
       "badge": "",
       "sort_order": 7,
       "is_public": 1,
-      "updated_at": "2026-08-08T12:54:24.300Z"
+      "updated_at": "2026-08-08T15:12:17.857Z"
+    },
+    {
+      "id": 17,
+      "subcategory_id": 2,
+      "title": "概要",
+      "body": "・犯罪クールタイム\r\n　1犯罪を行った後 1人あたり20分のクールタイムを設ける\r\n　\r\n・犯罪シーン\r\n　犯罪シーンは犯罪者1人個人として扱うものとする。\r\n\r\n・犯罪シーンの開始\r\n　PDが現場へ到着あるいは犯罪者が発砲をした時点で、犯罪シーンを開始とする。\r\n\r\n・犯罪シーンの終了\r\n　犯罪者が\r\n　犯罪者が牢屋に入る。",
+      "severity": "normal",
+      "badge": "",
+      "sort_order": 8,
+      "is_public": 1,
+      "updated_at": "2026-08-08T16:30:44.519Z"
     }
   ],
   "crimes": [
@@ -1062,7 +1073,7 @@
   "counters": {
     "categories": 7,
     "subcategories": 15,
-    "rules": 16,
+    "rules": 17,
     "crimes": 22,
     "fines": 48
   }
